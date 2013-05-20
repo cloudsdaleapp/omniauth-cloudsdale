@@ -12,11 +12,11 @@ module OmniAuth
         :token_url =>     "https://www.cloudsdale.org/oauth/token"
       }
 
-      uid { raw_info["id"] }
+      uid { raw_info["user"]["id"] }
 
       info do
         {
-          :email => raw_info["email"]
+          :email => raw_info["user"]["email"]
         }
       end
 
